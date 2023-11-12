@@ -8,7 +8,9 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Home');
+        return Inertia::render('Home', [
+            'lorem' => '1233333',
+        ]);
     }
 
     public function about()

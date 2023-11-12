@@ -1,5 +1,8 @@
 <template>
-    <h1>Hello World</h1>
+    <Layout>
+        
+    </Layout>
+    <h1>Hello {{ lorem }}</h1>
 
     <Link href="/admin">Admin</Link>
 </template>
@@ -9,13 +12,19 @@
 </style>
 
 <script>
+    import Layout from '../Layout/LayoutMaster.vue'
+
     import {
         Link
     } from '@inertiajs/vue3'
 
     export default {
         components: {
-            Link
+            Link,
+            Layout
         },
+        props: {
+            lorem: String,
+        }
     }
 </script>
